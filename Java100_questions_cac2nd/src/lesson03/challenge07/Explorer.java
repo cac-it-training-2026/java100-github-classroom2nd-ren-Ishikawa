@@ -83,10 +83,63 @@ public class Explorer {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+		//とりあえず三回繰り返す文を書く
+		while (i < 3) {
+
+			System.out.println("隊長：");
+			System.out.println("どの手を出して通り抜けますか");
+			System.out.print("（グー… 1 : チョキ… 2 : パー… 3）＞");
+
+			String handStr = br.readLine();
+			hand = Integer.parseInt(handStr);
+
+			alligator = (int) (Math.random() * 10 % 3) + 1;
+
+			if (hand == 1) {
+				if (alligator == 1 || alligator == 2) {
+					System.out.println("\n隊長：");
+					String kind = (alligator == 1) ? "グーワニ" : "チョキワニ";
+					System.out.println("相手は" + kind + "でした。");
+					System.out.println((i + 1) + "匹目通り抜け成功！\n");
+				} else {
+					System.out.println("\n隊長：");
+					System.out.println("相手は：パーワニでした。");
+					break;
+				}
+			} else if (hand == 2) {
+				if (alligator == 2 || alligator == 3) {
+					System.out.println("\n隊長：");
+					String kind = (alligator == 2) ? "チョキワニ" : "パーワニ";
+					System.out.println("相手は" + kind + "でした。");
+					System.out.println((i + 1) + "匹目通り抜け成功！\n");
+				} else {
+					System.out.println("\n隊長：");
+					System.out.println("相手は：グーワニでした。");
+					break;
+				}
+			} else if (hand == 3) {
+				if (alligator == 3 || alligator == 1) {
+					System.out.println("\n隊長：");
+					String kind = (alligator == 3) ? "パーワニ" : "グーワニ";
+					System.out.println("相手は" + kind + "でした。");
+					System.out.println((i + 1) + "匹目通り抜け成功！\n");
+				} else {
+					System.out.println("\n隊長：");
+					System.out.println("相手は：チョキワニでした。");
+					break;
+				}
+			} else {
+				System.out.println("\n隊長：");
+				System.out.println("そんな手はありませんよ。もう一度入れてください。\n");
+				i--;//網一度入れるから、iに加算されたらまずい。
+			}
+			i++;
+		}
 
 		//ここにwhile文、if文を利用した処理を記述
-
-
+		//３回繰り返す。次に自分がパー出した時・チョキ出した時・グー出した時をかく。
+		//その後、グーだった時に相手がグーわにかチョキわにだった場合とパーわにだった場合を書く。
+		//最後に３回繰り返せた場合とじゃない場合の処理を書く。
 		if (i == 3) {
 			System.out.println("隊長：");
 			System.out.println("川を渡り切りました。");

@@ -64,10 +64,16 @@ public class Explorer {
 		int fullLength = 300;
 		int member = 0;
 
-
-		//ここにwhile文を利用した処理を記述
-
-
+		while (member < 5) {
+			fullLength = 300;//ここでn人目の隊員が渡り始めるので、また300cmから始まる。
+			++member;//n人目。
+			System.out.println(member + "人目が渡り始めたよ");//渡り始めたから、一歩（５０cm）すすんでいる。
+			fullLength -= 50;//だから一歩目の50cmを引く。
+			while (fullLength > 0) {
+				fullLength -= 50;
+				System.out.println("隊長：\nまだ渡ってるよ");//このブロックは、残り250cmを渡る間の記述。
+			}
+		}
 		System.out.println("全員渡り終わったよ！");
 
 	}
