@@ -21,7 +21,7 @@
  *
  *  Yさん：
  *  はい、
- *  入れ替え前の状態は、
+ *  入れ替え前の状態は、			
  *  3,2,1,5,4
  *  です。
  *
@@ -39,9 +39,7 @@ public class WarehouseManager {
 
 		int[] ABKosanArray = new int[5];
 
-
 		//ここに重複チェックおよび値の代入処理を記述する
-
 
 		System.out.println("E主任：");
 		System.out.println("AB興産の荷物の入れ替えをお願いします。\n");
@@ -57,9 +55,7 @@ public class WarehouseManager {
 		}
 		System.out.println("\nです。\n");
 
-
 		//ここに値の入れ替え処理を記述する
-
 
 		System.out.println("入れ替え後の状態は、");
 		for (int i = 0; i < ABKosanArray.length; i++) {
