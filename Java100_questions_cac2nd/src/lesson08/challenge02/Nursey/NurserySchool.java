@@ -10,8 +10,7 @@
  *
  */
 
-package lesson08.challenge01;
-
+package lesson08.challenge02.Nursey;
 public class NurserySchool {
 
 	public static void main(String[] args) {
