@@ -30,9 +30,9 @@
  *  Z先輩：
  *  いらっしゃいませ、本日はString型のみの販売になります。
  *
- *  要素数を入れてください＞○
- *
- *  代入する値を入れてください＞○
+ *  要素数を入れてください＞○ 入力処理
+ *										ここで配列宣言して
+ *  代入する値を入れてください＞○　こっからは配列への代入処理をfor文で繰り返す。
  *
  *  代入する値を入れてください＞△
  *
@@ -92,15 +92,19 @@ public class WarehouseManager {
 
 		System.out.print("要素数を入れてください＞");
 
-
+		String yousostr = br.readLine();
+		int yousonum = Integer.parseInt(yousostr);
 		//ここに入力処理を記述する
-
-
+		String[] hairetumei;
+		hairetumei = new String[yousonum];
 		//ここに配列宣言を記述する
+		for (int i = 0; i < yousonum; i++) {
+			System.out.println("代入する値を入れてください。>");
+			String str = br.readLine();
 
-
+			hairetumei[i] = str;
+		}
 		//ここに値の入力+代入処理を記述する（for文）
-
 
 		System.out.println("\nYさん：");
 		System.out.println("...出来ました。\n");
@@ -109,10 +113,10 @@ public class WarehouseManager {
 		System.out.println("全部の要素を出力してください。\n");
 
 		System.out.println("Yさん：");
-
-
+		for (int i = 0; i < hairetumei.length; i++) {
+			System.out.println(hairetumei[i]);
+		}
 		//ここに配列の値の出力処理を記述する（for文）
-
 
 		System.out.println("です。\n");
 

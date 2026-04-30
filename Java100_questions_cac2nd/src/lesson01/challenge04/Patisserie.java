@@ -28,6 +28,28 @@
 
 package lesson01.challenge04;
 
-public class Patisserie {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
+public class Patisserie {
+	public static void main(String[] args) throws IOException {
+		System.out.println("それぞれ何個ずつ買いますか？（最大30個まで）");
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.print("シトロン      >");
+		String str1 = reader.readLine();
+		System.out.print("ショコラ      >");
+		String str2 = reader.readLine();
+		System.out.print("ピスターシュ  >");
+		String str3 = reader.readLine();
+
+		System.out.println("シトロン     " + str1 + "個");
+		System.out.println("ショコラ     " + str2 + "個");
+		System.out.println("ピスターシュ " + str3 + "個");
+
+		System.out.println("をお買い上げですね。");
+		System.out.println("承りました。");
+	}
 }
